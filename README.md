@@ -1,3 +1,3 @@
 # Wordle-clone
 
-Created with Benjamin Ann.
+Created with Benjamin An.
