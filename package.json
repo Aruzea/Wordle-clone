@@ -1,0 +1,80 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/gui/server.cjs",
+    "test": "jest --collect-coverage",
+    "lint": "eslint src test",
+    "plato": "plato -d report -r src"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "src/gui"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "globals": {
+      "expect": "readonly",
+      "Matches": "readonly",
+      "Status": "readonly",
+      "play": "readonly",
+      "getARandomWord": "readonly",
+      "spellCheck": "readonly",
+      "getResponse": "readonly"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "mocha": true,
+      "jest": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 9
+    },
+    "rules": {
+      "eqeqeq": "error",
+      "strict": "error",
+      "no-var": "error",
+      "no-unused-vars": [
+        "off"
+      ],
+      "prefer-const": "error",
+      "no-console": "off",
+      "indent": [
+        "error",
+        2
+      ],
+      "quotes": [
+        "error",
+        "single",
+        "avoid-escape"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "express": "^4.18.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "plato": "^1.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "node-fetch": "^3.3.2",
+    "valueerror": "^0.0.2"
+  }
+}
